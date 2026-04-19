@@ -1,0 +1,94 @@
+:root {
+    --white: #FFFFFF;
+    --black: #1C1A1A;
+    --violet: #440F51;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    color: var(--black);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    background: var(--black);
+}
+
+.accordion {
+    width: 1180px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: var(--white);
+    line-height: 50px;
+    font-size: 40px;
+    margin-bottom: 46px;
+}
+
+.contentBox:nth-child(odd) .label {
+    background: var(--white);
+    color: var(--black);
+}
+
+.contentBox:nth-child(odd) .label::after {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(24%) saturate(5808%) hue-rotate(270deg) brightness(94%) contrast(105%);
+}
+
+.label {
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    padding: 29px 72px;
+    background: var(--violet);
+    color: var(--white);
+    cursor: pointer;
+    letter-spacing: 0.72px;
+}
+
+.label::after {
+    content: url('../icons/open.svg');
+    position: absolute;
+    top: 50%;
+    right: 70px;
+    transform: translateY(-45%);
+}
+
+.contentBox.active .label::after {
+    content: url('../icons/close.svg');
+}
+
+.content {
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background: var(--white);
+    height: 0;
+    min-height: 0; 
+    padding: 0 72px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    overflow-y: hidden;
+}
+
+p {
+    align-content: center;
+}
+
+.contentBox.active .content {
+    height: auto;
+    min-height: 214px;
+    padding: 72px;
+}
