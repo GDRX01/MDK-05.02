@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <img src="./img/Mushroom.png" alt="" id="img">
+    <div class="container">
+        <h2>Анимация с requestAnimationFrame</h2>
+        <canvas id="canvas" width="600" height="400"></canvas>
+        <div>
+            <button id="startBtn">Страрт</button>
+            <button id="stopBtn">Стоп</button>
+            <button id="resetBtn">Сброс</button>
+        </div>
+        <div class="info">
+            <p>Квадрат движется слева направо и обратно</p>
+            <p>FPS: <span id="fps">0</span></p>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
