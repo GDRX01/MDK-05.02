@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    padding: 40px;
+    background: #fff;
+}
+
+.root {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 18px;
+    color: #333;
+}
+
+.card a {
+    display: block;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.card p:last-child {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #666;
+    color: #666;
+    font-style: italic;
+}
